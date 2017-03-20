@@ -1,0 +1,55 @@
+{% extends "layout.html" %} {% block page_title %} Do you want a break? {% endblock %} {% block head %} {% include "includes/head.html" %} {% include "includes/scripts.html" %} {% endblock %} {% block content %}
+<main id="content" role="main">
+
+    <div class="grid-row">
+
+        <div class="column-two-thirds">
+            <h1 class="heading-large">Do you want a break?</h1>
+
+            <form>
+                <div class="form-group">
+                    <fieldset class="inline">
+
+                        <legend class="visuallyhidden">Do you want a break?</legend>
+
+                        <label class="block-label" for="radio-inline-1">
+                            <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes"> Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-2">
+                            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No"> No
+                        </label>
+
+                    </fieldset>
+
+                    <details>
+
+                        <summary><span class="summary">What do we mean by this?</span></summary>
+                        <div class="panel panel-border-narrow">
+
+                            <p>
+                                If you want a break you could stop working.
+                            </p>
+
+                            <p>
+                                If you are a trooper you will power through.
+                            </p>
+
+                        </div>
+
+                    </details>
+                </div>
+                <input class="button" type="submit" value="Save and continue">
+            </form>
+        </div>
+
+        <div class="column-one-third">
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+</main>
+{% endblock %}

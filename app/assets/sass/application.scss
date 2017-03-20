@@ -1,0 +1,93 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/verify';
+@import 'patterns/digital-licence-icon';
+@import 'patterns/available-languages';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+    margin-top: $gutter;
+    border-top: 10px solid $govuk-blue;
+    padding-top: 5px;
+
+    .heading-medium {
+        margin-top: 0.3em;
+        margin-bottom: 0.5em;
+    }
+
+    li {
+        margin-bottom: 10px;
+        list-style-type: none;
+    }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+.button.white {
+    background: $page-colour;
+    color: $govuk-blue !important;
+    border: 1px solid $page-colour;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.31579;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 0 15px 0;
+    padding: 0.52632em 0.78947em 0.26316em 0.78947em;
+    min-width: 150px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 0;
+}
+
+
+.govuk-box-highlight1 {
+  margin: 1em 0;
+  padding-top: 0.1em;
+    padding-bottom: 3em;
+  color: $white;
+  background: $grey-2;
+  text-align: center;
+  
+}
+
+.govuk-box-highlight {
+  margin: 1em 0;
+  padding-top: 0.1em;
+    padding-bottom: 3em;
+  color: $white;
+  background: $turquoise;
+  text-align: center;
+}
+
+// *--------------
+// Feedback banner
+.feedback-banner {
+    max-width: 960px;
+    margin: 0 auto;
+    border-bottom: none !important;
+}
+.feedback-banner p { font-size: 16px; margin-top: .5em; margin-left: -15px; }
+.feedback-banner-right { margin-right: -15px; }
+.feedback-banner-right p { text-align: right !important; }
+@media (min-width: 641px) {
+    #feedback-banner { margin: 0 30px; }
+}
+@media (min-width: 960px) {
+    #feedback-banner { margin: 0 auto; }
+}

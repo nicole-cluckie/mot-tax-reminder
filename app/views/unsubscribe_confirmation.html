@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %} Confirmation {% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+    {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% import "templates/button.html" as button %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            <div class="govuk-box-highlight">
+                <h1 class="bold-large heading-large"> &nbsp;You have succesfully unsubscribed</h1>
+                <p>for registration number:</p>
+                <h1 class="heading-xlarge">BV09 WXL</h1>
+                <p>to email address:</p>
+                <h4 class="heading-small">Joe.bloggs@email.com</h4>
+            </div>
+
+           
+
+            <div>
+                <p>You have canceled all Tax and MOT reminders to email address Joe.Bloggs@email.com</p>
+                <p>You can re subscribe at any time</p>
+
+                
+                <p>To subscribe to this service <a href="index.html">click here</a></p>
+                
+                {{ button.input(id='button', name='button', class='button', type='button', value='Return to GOV.UK') }}
+            </div>
+        </div>
+
+        <div class="column-one-third">
+
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(".button").click(function () {
+        // Enter function name here
+        next();
+    });
+
+    function next() {
+        window.location.href = 'your-details';
+    }
+</script>
+
+{% endblock %}

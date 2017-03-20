@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %} Confirmation {% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+    {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% import "templates/button.html" as button %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            <div class="govuk-box-highlight">
+                <h1 class="bold-large heading-large"><img src="/public/images/tick-white.png" alt="" width="32px">&nbsp;Thank you</h1>
+                <h2 class="heading-large">You have succesfully created your reminder</h2>    
+                </div>
+                <h3 class="heading-medium">Your registration number is:</h3> 
+                <h1 class="heading-xlarge">BV09 WXL</h1>
+               <h3 class="heading-medium">You have confirmed your email address as:</h3>
+                <p>joe.bloggs@email.com</p>
+            
+            
+            <h2 class="heading-medium">What happens next?</h2>
+
+            <div>
+                <p>You will receive a reminder two weeks prior to your Tax and/or MOT expiry dates.</p>
+                <p>Your reminder will be sent to you via the email address you provided.</p>
+
+                
+      
+                
+                {{ button.input(id='button', name='button', class='button', type='button', value='Return to GOV.UK') }}
+            </div>
+        </div>
+
+        <div class="column-one-third">
+
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(".button").click(function () {
+        // Enter function name here
+        next();
+    });
+
+    function next() {
+        window.location.href = 'index';
+    }
+</script>
+
+{% endblock %}

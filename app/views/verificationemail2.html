@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %} Confirmation {% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+    {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% import "templates/button.html" as button %}
+
+{% block content %}
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-FULL">
+            <div class="govuk-box-highlight1">
+                <h1 class="bold-large heading-large">&nbsp;We have sent a verification email to:</h1>
+                <p>joe.bloggs@email.com</p>
+                <p>dave.jones@email.com</p>
+                <p><p>
+  <a href="enterdetails2.html">Change my email address</a>
+</p>
+            </div>
+
+            <h2 class="heading-medium">What happens next</h2>
+
+            <div>
+                <p>We have sent a verification link to the email address you provided, please follow the instructions in the email to complete this process.</p>
+                <p>If you do not recieve a verification email, please check your email address is correct and resend.</p>
+
+      
+                
+                {{ button.input(id='button', name='button', class='button', type='button', value='Resend verification email') }}
+            </div>
+        </div>
+
+        <div class="column-one-third">
+
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(".button").click(function () {
+        // Enter function name here
+        next();
+    });
+
+    function next() {
+        window.location.href = '';
+    }
+</script>
+
+{% endblock %}

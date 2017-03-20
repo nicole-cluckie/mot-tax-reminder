@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %} ___PAGETITLE__ {% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+    {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% import "templates/button.html" as button %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            {{ button.input(id='button', name='button', class='button', type='button', value='Continue') }}
+        </div>
+
+        <div class="column-one-third">
+            
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(".button").click(function(){
+        // Enter function name here
+        next();
+    });
+
+    function next() {
+        window.location.href = '___PATH_IN_PROTOTYPE___';
+    }
+</script>
+
+{% endblock %}

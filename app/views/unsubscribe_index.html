@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block page_title %} Digital licence {% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+    {% include "includes/scripts.html" %}
+<style type="text/css">
+
+    .modified-date { font-size: 16px; }
+    .column-one-third { border-top: 10px solid #005ea5; margin-top: 0; padding-top: 1em; }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="breadcrumbs">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/browse/driving">Driving and transport</a></li>
+            <li><strong><a href="/browse/driving/driving-licences">Unsubscribe from the tax and MOT notification service</a></strong></li>
+        </ol>
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Unsubscribe from the tax and MOT notification service</h1>
+            
+            <p>Use this service to:</p>
+
+            <ul class="list list-bullet">
+                <li>Cancel a reminder for your tax and/or MOT expiry.</li>
+                
+            </ul>
+
+            <div class="panel panel-border-wide">
+                <p>You should only use this service for your own vehicle(s)</p>
+            </div>
+            
+            <a class="button button-start" href="#" role="button">Start now</a>
+            <br><br>
+            <h3 class="heading-medium">Before you start</h3>
+            <p>You will be asked to provide your vehicle registration and your contact email address to use this service</p>
+            <p>You can’t use this service if your licence was issued outside England, Wales, Scotland or Northern Ireland.</p>
+            
+            <p>To subscribe to this service please
+  <a href="index.html">click here</a>
+            </p>
+            
+            <p class="modified-date form-hint">Last updated: 21 December 2016</p>
+        </div>
+        
+        <div class="column-one-third">
+            <h2 class="heading-medium">Driving licences</h2>
+            <ul class="list">
+                <li><a href="">Change the address on your driving licence</a></li>
+                <li><a href="">Contact DVLA</a></li>
+                <li><a href="">Driving licence categories</a></li>
+                <li><a href="">Driving licence codesv</a></li>
+            </ul>
+            
+            <h2 class="heading-medium">Elsewhere on GOV.UK</h2>
+            <ul class="list">
+                <li><a href="">Vehicle tax changes</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(".button").click(function(){
+        // Enter function name here
+        next();
+    });
+    
+    function next() {
+        window.location.href = 'unsubscribe_enterdetails';
+    }
+</script>
+
+{% endblock %}

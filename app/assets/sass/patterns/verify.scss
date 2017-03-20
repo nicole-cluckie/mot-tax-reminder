@@ -1,0 +1,232 @@
+.verify-blue { background-color: $govuk-blue; }
+.verify-green { background-color: $turquoise; }
+#verify-box {
+    margin-top: 55px;
+    min-height: 400px;
+    padding: 75px 70px 3px;
+}
+img.verify-logo {
+    width: 200px;
+    height: 139px;
+}
+.success-tick {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    margin-bottom: -2px;
+}
+#verify-box p { font-size: 1.26316em; }
+#verify-box-inner { color: $page-colour; }
+#verify-box-inner h1 { margin-top: 0; }
+
+.verify-left-column,
+.verify-right-column { float: left; }
+.verify-left-column { width: 33.33333%; }
+.verify-right-column { width: 66.66666%; }
+
+
+//  Mobile Tablets
+@media (max-width: 768px) {
+    #verify-box {
+        margin-top: 25px;
+        min-height: 300px;
+        padding: 75px 35px 3px;
+    }
+    img.verify-logo {
+        width: 150px;
+        height: 104.25px;
+    }
+    .success-tick {
+        margin-right: 0px;
+    }
+    #verify-box-inner h1.heading-large.start {
+        font-size: 28px;
+        margin: 0;
+        padding-top: 0px;
+    }
+    #verify-box-inner h1.heading-large.end {
+        font-size: 28px;
+        padding-left: 0;
+    }
+    #verify-box .block-label {
+        font-size: 19px !important;
+        padding-right: 0;
+    }
+    #verify-box p { font-size: 1em; }
+}
+
+//  Mobile phone (Retina)
+@media (max-width: 375px) {
+    #verify-box {
+        margin-top: 25px;
+        min-height: 450px;
+        padding: 25px 20px 3px;
+    }
+    .success-tick {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    #verify-box p { font-size: 1em; }
+    #verify-box-inner h1.heading-large.start {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+    #verify-box-inner h1.heading-large.end { font-size: 20px; }
+    .verify-left-column,
+    .verify-right-column { float: none; }
+    .verify-left-column { width: 100%; }
+    .verify-left-column { width: 200px; margin: 0 auto; }
+    .verify-right-column { width: 100%; }
+    #verify-box .block-label {
+        font-size: 16px;
+        padding-right: 0;
+    }
+}
+
+//  Mobile phone
+@media (max-width: 320px) {
+    #verify-box {
+        margin-top: 25px;
+        min-height: 450px;
+        padding: 25px 20px 3px;
+    }
+    .success-tick {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    #verify-box p { font-size: 1em; }
+    #verify-box-inner h1 {
+        font-size: 16px;
+        margin: 0;
+        padding-top: 40px;
+    }
+    .verify-left-column,
+    .verify-right-column { float: none; }
+    .verify-left-column { width: 100%; }
+    .verify-left-column { width: 200px; margin: 0 auto; }
+    .verify-right-column { width: 100%; }
+    #verify-box .block-label {
+        font-size: 16px;
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//  Hides radio
+#verify-box .block-label [type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 50px;
+    width: 1px;
+}
+#verify-box .block-label {
+    background-color: $govuk-blue;
+    font-size: 1.26316em;
+    padding: 10px 30px 10px 37px;
+    border: none;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 42px;
+    clear: left;
+    position: relative;
+    cursor: pointer;
+}
+#verify-box .block-label:hover { background-color: #2e8aca; }
+#verify-box label.selected {
+    background: $govuk-blue !important;
+    border-color: $text-colour;
+}
+
+// Larger radios
+#verify-box .block-label [type="checkbox"] + span,
+#verify-box .block-label [type="radio"] + span {
+    background: $page-colour;
+    border: 2px solid $text-colour;
+    top: 7px;
+    left: 4px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+//@media (min-width: 641px) {
+//    #verify-box .block-label [type="checkbox"] + span,
+//    #verify-box .block-label [type="radio"] + span {
+//        width: 25px;
+//        height: 25px;
+//        left: 7px;
+//        top: 8px;
+//    }
+//}
+#verify-box .block-label [type="checkbox"] + span .inner,
+#verify-box .block-label [type="radio"] + span .inner {
+    display: inherit;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    width: 16px;
+    height: 16px;
+}
+//@media (min-width: 641px) {
+//    #verify-box .block-label [type="checkbox"] + span .inner,
+//    #verify-box .block-label [type="radio"] + span .inner {
+//        width: 19px;
+//        height: 19px;
+//    }
+//}
+#verify-box .block-label [type="checkbox"] + span {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+#verify-box .block-label [type="checkbox"] + span .inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+#verify-box .block-label [type="radio"]:focus + span .inner,
+#verify-box .block-label [type="checkbox"]:focus + span .inner {
+    border-color: #ffbf47;
+}
+#verify-box .block-label.selected [type="radio"] + span,
+#verify-box .block-label [type="radio"]:checked + span {
+    background: #0b0c0c;
+}
+#verify-box .block-label.selected [type="checkbox"] + span .inner,
+#verify-box .block-label [type="checkbox"]:checked + span .inner {
+    background: url(/assets/images/icons/checkbox-tick-mobile-d3ff951774f6e0477593869771513374.png) 0 0 no-repeat;
+}
+//@media (min-width: 641px) {
+//    #verify-box .block-label.selected [type="checkbox"] + span .inner,
+//    #verify-box .block-label [type="checkbox"]:checked + span .inner {
+//        background: url(/assets/images/icons/checkbox-tick-e10f8e48b833a1ed7dc70b40f8df7be8.png) 0 0 no-repeat;
+//    }
+//}
+
+
+
+
+.verify-feedback-link,
+.verify-feedback-link a {
+    font-size: 16px;
+    color: #6f777b;
+}

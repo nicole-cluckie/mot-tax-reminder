@@ -1,0 +1,73 @@
+{% extends "layout.html" %} {% block page_title %} Terms and conditions {% endblock %} {% block head %} {% include "includes/head.html" %} {% include "includes/scripts.html" %} {% endblock %} {% import "templates/button.html" as button %} {% block content %}
+<main id="content" role="main">
+    <div class="column-full">
+    <div class="grid-row">
+        <div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+        </div>
+
+        <div class="column-two-thirds">
+
+            
+
+            
+
+            <form>
+                <fieldset>
+
+                <h1 class="heading-medium">What do you want to use this service for?</h1>
+
+<form>
+  <div class="form-group">
+    <fieldset>
+
+      <legend class="visually-hidden">What do you want to use this service for?</legend>
+
+      <label class="block-label selection-button-radio" for="radio-1">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        Tax reminder
+      </label>
+      <label class="block-label selection-button-radio" for="radio-2">
+        <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+        MOT reminder
+      </label>
+      <p class="form-block">or</p>
+      <label class="block-label selection-button-radio" for="radio-3">
+        <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+        Both
+      </label>
+
+    </fieldset>
+  </div>
+</form>    
+
+                </fieldset>
+                <br>
+
+                {{ button.input(id='button', name='button', class='button', type='button', value='Continue') }}
+            </form>
+
+        </div>
+
+        <div class="column-one-third">
+
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(".button").click(function () {
+        // Enter function name here
+        next();
+    });
+
+    function next() {
+        window.location.href = 'viewdetails';
+    }
+</script>
+
+{% endblock %}

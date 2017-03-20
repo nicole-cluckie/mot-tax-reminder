@@ -1,0 +1,49 @@
+#your-details .grid-row { height: 140px; }
+#user-photo img {
+    width: 100px;
+    height: 114px;
+}
+#digital-licence-icon a img {
+    width: 60px;
+    height: 114px;
+}
+#digital-licence-icon p {
+    @include core-16;
+    max-width: 110px;
+    margin-top: -6.5em;
+    margin-bottom: .5em;
+    margin-left: 4.5em;
+    padding-bottom: 0;
+}
+#digital-licence-icon input.button.button-start.button-get-started {
+    @include core-16;
+    margin-left: 4.5em;
+    padding: 0.3684210526em 2.1578947368em 0.2105263158em 0.8421052632em;
+    background-image: url("/public/images/icon-pointer-15x19.png") !important;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-size: 11%;
+}
+#digital-licence-icon span {
+    float: left;
+    margin-top: -6em;
+    min-width: 200px;
+    min-height: 95px;
+    background-color: $panel-colour;
+}
+
+
+
+
+
+//  Mobile Tablets
+//@media (max-width: 768px) {
+//}
+
+//  Mobile phone (Retina)
+//@media (max-width: 375px) {
+//}
+
+//  Mobile phone
+//@media (max-width: 320px) {
+//}

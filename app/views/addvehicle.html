@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block page_title %} Devices {% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+    {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% import "templates/button.html" as button %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            <div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+        <div class="column-two-thirds">
+          
+            <h2 class="heading-large">Check your details before confirming</h2>
+            
+
+    
+   
+        <table>
+  <thead>
+    <tr>
+      <th scope="col">Your details</th>
+      <th class="numeric" scope="col"></th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Registration number</td>
+      <td class="numeric">BV09 WXL</td>
+      <td class="numeric"><a href="enterdetails_copy.html">Change</a></td>
+    </tr>
+    
+    <tr>
+     <td>Email address</td>
+      <td class="numeric">joe.bloggs@email.com</td>
+      <td class="numeric"><a href="enterdetails_copy.html">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+            
+            <table>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th class="numeric" scope="col"></th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Registration number</td>
+      <td class="numeric">RV16 NVL</td>
+      <td class="numeric"><a href="enterdetails_copy2.html">Change</a></td>
+    </tr>
+    <tr>
+      <td>Email address</td>
+      <td class="numeric">joe.bloggs@email.com</td>
+      <td class="numeric"><a href="enterdetails_copy2.html">Change</a></td>
+    </tr>
+    
+  </tbody>
+</table>
+            
+            <p>
+  <a href="enterdetails4.html">Add another vehicle registration</a>
+</p>
+            <br>
+            
+            {{ button.input(id='button', name='button', class='button', type='button', value='Confirm email reminder') }}
+            
+            
+            
+        </div>
+
+        <div class="column-one-third">
+            
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(".button").click(function(){
+        // Enter function name here
+        next();
+    });
+
+    function next() {
+        window.location.href = 'verificationemail';
+    }
+</script>
+
+{% endblock %}
